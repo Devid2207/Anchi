@@ -132,10 +132,10 @@ function Home(props) {
             type === 'food'
               ? 'Zô, vậy là bạn thích ' +
                 currentFood.title +
-                '. Chần chừ chi mà hông đi ăn thôi nào!'
+                '. Chần chừ chi mà không đi ăn thôi nào!'
               : 'Zô, vậy là bạn thích ' +
                 currentRestaurant.title +
-                '. Chần chừ chi mà hông đi ăn thôi nào!'
+                '. Chần chừ chi mà không đi ăn thôi nào!'
           }
         />
       ) : null}
@@ -157,12 +157,12 @@ function Home(props) {
           }}
           content={
             type === 'food'
-              ? 'Zô, vậy là bạn hông thích ' +
+              ? 'Zô, vậy là bạn không thích ' +
                 currentFood.title +
-                '. Vậy để mình thêm vào hố đen nhá!'
-              : 'Zô, vậy là bạn hông thích ' +
+                '. Vậy để mình thêm vào blacklist nhá!'
+              : 'Zô, vậy là bạn không thích ' +
                 currentRestaurant.title +
-                '. Vậy để mình thêm vào hố đen nhá!'
+                '. Vậy để mình thêm vào blacklist nhá!'
           }
         />
       ) : null}

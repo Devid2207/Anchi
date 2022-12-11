@@ -11,6 +11,9 @@ export const REMOVE_RESTAURANT_FROM_FAVORITE =
   'REMOVE_RESTAURANT_FROM_FAVORITE';
 export const ADD_FOOD_TO_BLACKLIST = 'ADD_FOOD_TO_BLACKLIST';
 export const ADD_RESTAURANT_TO_BLACKLIST = 'ADD_RESTAURANT_TO_BLACKLIST';
+export const REMOVE_FOOD_FROM_BLACKLIST = 'REMOVE_FOOD_FROM_BLACKLIST';
+export const REMOVE_RESTAURANT_FROM_BLACKLIST =
+  'REMOVE_RESTAURANT_FROM_BLACKLIST';
 export const FLUSH_LOCAL = 'FLUSH_LOCAL';
 export const SET_DARKTHEME = 'SET_DARKTHEME';
 
@@ -94,6 +97,20 @@ export const addFoodToBlacklist = foodId => dispatch => {
 export const addRestaurantToBlacklist = restaurantId => dispatch => {
   dispatch({
     type: ADD_RESTAURANT_TO_BLACKLIST,
+    payload: restaurantId,
+  });
+};
+
+export const removeFoodFromBlacklist = foodId => dispatch => {
+  dispatch({
+    type: REMOVE_FOOD_FROM_BLACKLIST,
+    payload: foodId,
+  });
+};
+
+export const removeRestaurantFromBlacklist = restaurantId => dispatch => {
+  dispatch({
+    type: REMOVE_RESTAURANT_FROM_BLACKLIST,
     payload: restaurantId,
   });
 };

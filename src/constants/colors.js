@@ -1,4 +1,4 @@
-export default Colors = {
+const Colors = {
     primary: '#6464af',
     primary80: '#6464af80',
     primary40: '#6464af40',
@@ -8,7 +8,7 @@ export default Colors = {
     secondary: '#7170D3',
     primaryDark: '#2759ff',
     primaryLite: '#637aff99',
-    
+
     home2: '#7170D3',
     home280: '#7170D380',
     home1: '#D289FF',
@@ -17,7 +17,7 @@ export default Colors = {
     dislike2: '#FFA06A',
     like1: '#62F6FF',
     like2: '#6AF25E',
-    
+
     darkGray: '#999999',
     black: '#000',
     white: '#fff',
@@ -47,7 +47,6 @@ export default Colors = {
     greenAlpha: 'rgba(96, 197, 168, 0.15)',
     purpleAlpha: 'rgba(146, 6, 228, 0.15)',
 
-
     // bags background colors
     bag1Bg: '#ea7a72',
     bag2Bg: '#c2c5d1',
@@ -60,4 +59,6 @@ export default Colors = {
     bag9Bg: '#eb849c',
     bag10Bg: '#979dc1',
     bag11Bg: '#c7d3c0',
-}
+};
+
+export default Colors;

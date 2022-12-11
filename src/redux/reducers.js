@@ -15,6 +15,8 @@ import {
   REMOVE_RESTAURANT_FROM_FAVORITE,
   ADD_FOOD_TO_BLACKLIST,
   ADD_RESTAURANT_TO_BLACKLIST,
+  REMOVE_FOOD_FROM_BLACKLIST,
+  REMOVE_RESTAURANT_FROM_BLACKLIST,
   FLUSH_LOCAL,
   SET_DARKTHEME
 } from './actions';
@@ -141,6 +143,18 @@ const blacklistReducer = (state = InitialState.BLACKLIST_DATA, action) => {
         console.log('That restaurant is already in the blacklist');
       }
       return state;
+    }
+    case REMOVE_FOOD_FROM_BLACKLIST: {
+      return {
+        ...state,
+        food: state.food.filter(item => item !== action.payload),
+      };
+    }
+    case REMOVE_RESTAURANT_FROM_BLACKLIST: {
+      return {
+        ...state,
+        restaurant: state.restaurant.filter(item => item !== action.payload),
+      };
     }
     default: {
       return state;
