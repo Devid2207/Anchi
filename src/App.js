@@ -15,6 +15,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import * as Animatable from 'react-native-animatable';
 import Favorite from './screens/favorite';
+import Blacklist from './screens/blacklist';
 import Search from './screens/search';
 import Home from './screens/home';
 import Add from './screens/add';
@@ -62,9 +63,10 @@ const darkTheme = {
 }
 
 const TabArr = [
+  { route: 'Home', label: 'Home', type: Icons.Feather, icon: 'home', component: Home, },
   { route: 'Add', label: 'Add', type: Icons.Feather, icon: 'plus-square', component: Add, },
   { route: 'Favorite', label: 'Favorite', type: Icons.Feather, icon: 'heart', component: Favorite, },
-  { route: 'Home', label: 'Home', type: Icons.Feather, icon: 'home', component: Home, },
+  { route: 'Blacklist', label: 'Blacklist', type: Icons.Feather, icon: 'trash', component: Blacklist, },
   { route: 'Search', label: 'Search', type: Icons.Feather, icon: 'search', component: Search, },
   { route: 'Menu', label: 'Menu', type: Icons.Feather, icon: 'menu', component: Menu, },
 ];

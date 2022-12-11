@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\Anchi\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
+            "outputFile": "E:\\Anchi\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\f8cfdef18edf0f0dc80f7630fe54d7fb\\transformed\\core-1.6.0\\res\\values-bn\\values-bn.xml",

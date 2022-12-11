@@ -5,33 +5,33 @@ import {connect} from 'react-redux';
 import CustomButton, {CustomButtonOutline} from '../components/CustomButton';
 import GlobalStyle from '../styles/GlobalStyle';
 import {Icons} from '../components/icons';
-import FavoriteItem from '../components/FavoriteItem';
+import BlacklistItem from '../components/BlacklistItem';
 import colors from '../constants/colors';
 
-function Favorite(props) {
+function Blacklist(props) {
   const [type, setType] = useState('food');
-  const [favoriteFood, setFavoriteFood] = useState(
-    props.foods.data.filter(item => props.favorite.food.includes(item.id)),
+  const [blacklistFood, setBlacklistFood] = useState(
+    props.foods.data.filter(item => props.blacklist.food.includes(item.id)),
   );
-  const [favoriteRestaurant, setFavoriteRestaurant] = useState(
+  const [blacklistRestaurant, setBlacklistRestaurant] = useState(
     props.foods.data.filter(item =>
-      props.favorite.restaurant.includes(item.id),
+      props.blacklist.restaurant.includes(item.id),
     ),
   );
 
   useEffect(() => {
-    setFavoriteFood(state =>
-      props.foods.data.filter(item => props.favorite.food.includes(item.id)),
+    setBlacklistFood(state =>
+      props.foods.data.filter(item => props.blacklist.food.includes(item.id)),
     );
-  }, [props.favorite.food]);
+  }, [props.blacklist.food]);
 
   useEffect(() => {
-    setFavoriteRestaurant(state =>
+    setBlacklistRestaurant(state =>
       props.restaurants.data.filter(item =>
-        props.favorite.restaurant.includes(item.id),
+        props.blacklist.restaurant.includes(item.id),
       ),
     );
-  }, [props.favorite.restaurant]);
+  }, [props.blacklist.restaurant]);
 
   return (
     <View style={GlobalStyle.content}>
@@ -49,16 +49,16 @@ function Favorite(props) {
         type={Icons.FontAwesome5}
       />
       <View style={[GlobalStyle.TitleBoxHeader]}>
-        <Text style={GlobalStyle.Title}>Yêu thích</Text>
+        <Text style={GlobalStyle.Title}>Blacklist</Text>
       </View>
       <SafeAreaView style={styles.favBox}>
         {type === 'food' ? (
           <FlatList
-            data={favoriteFood}
+            data={blacklistFood}
             initialNumToRender={10}
             renderItem={item => {
               return (
-                <FavoriteItem
+                <BlacklistItem
                   data={item.item}
                   navigation={props.navigation}
                   type={'food'}
@@ -69,11 +69,11 @@ function Favorite(props) {
           />
         ) : (
           <FlatList
-            data={favoriteRestaurant}
+            data={blacklistRestaurant}
             initialNumToRender={10}
             renderItem={item => {
               return (
-                <FavoriteItem
+                <BlacklistItem
                   data={item.item}
                   navigation={props.navigation}
                   type={'restaurant'}
@@ -108,9 +108,9 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-  favorite: state.favorite,
-  foods: state.filteredFoods,
-  restaurants: state.filteredRestaurants,
+  blacklist: state.blacklist,
+  foods: state.foods,
+  restaurants: state.restaurants,
 });
 
-export default connect(mapStateToProps, {})(Favorite);
+export default connect(mapStateToProps, {})(Blacklist);

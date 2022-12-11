@@ -251,7 +251,7 @@ export function LikeDialog(props) {
             heading={'CHÚC MỪNG'}
             content={props.content}
             Cancel={'Hừm...'}
-            OK={'Géc gô !!'}
+            OK={'Đi thôi !!'}
         />
     );
 }
